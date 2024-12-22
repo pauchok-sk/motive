@@ -1,0 +1,33 @@
+.title-1 {
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 100%;
+  color: var(--main);
+
+  @include laptop {
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 120%;
+  }
+
+  @include tablet {
+    font-size: 32px;
+  }
+}
+.title-2 {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 120%;
+  color: var(--black);
+
+  @include laptop {
+    font-size: 32px;
+  }
+}
+
+.title-3 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 120%;
+  color: var(--black);
+}

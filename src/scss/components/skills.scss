@@ -1,0 +1,105 @@
+.skills {
+  &__body {
+    position: relative;
+    overflow: hidden;
+    margin: 0 12px;
+    border-radius: 64px;
+    padding: 120px 0px;
+    background-color: var(--gray);
+    z-index: 1;
+    @include laptop {
+      margin: 0;
+      border-radius: 32px;
+    }
+    @include laptop-min {
+      padding: 50px 0px;
+    }
+    @include tablet {
+      border-radius: 16px;
+    }
+  }
+  &__decor {
+    position: absolute;
+    z-index: -1;
+    max-width: none;
+
+    &._big {
+      width: 745px;
+      left: -250px;
+      bottom: -200px;
+      transform: rotate(-46deg);
+    }
+    &._min {
+      width: 845px;
+      bottom: -175px;
+      right: -195px;
+    }
+
+    @include laptop {
+      &._min {
+        right: -810px;
+        bottom: -150px;
+      }
+    }
+    @include tablet {
+      &._big {
+        bottom: 35px;
+      }
+      &._min {
+        display: none;
+      }
+    }
+    @include tablet-min {
+      &._big {
+        top: -245px;
+        left: -225px;
+        bottom: auto;
+      }
+    }
+  }
+  &__tag {
+    margin-bottom: 12px;
+  }
+  &__title {
+    margin: 0px 0px 64px 0px;
+    @include tablet {
+      text-align: center;
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+  }
+  &__item {
+    padding: 24px;
+    border-radius: 24px;
+    background-color: white;
+    grid-column: 4 span;
+
+    @include laptop-middle {
+      grid-column: 6 span;
+    }
+    @include tablet-min {
+      grid-column: 12 span
+    }
+  }
+  &__item-circle {
+    @include flex-center;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: var(--pink);
+    margin-bottom: 20px;
+  }
+  &__item-icon {
+    max-width: 24px;
+  }
+  &__item-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    color: var(--black);
+    margin: 0px 0px 16px 0px;
+  }
+}

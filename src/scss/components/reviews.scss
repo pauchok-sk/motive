@@ -1,0 +1,104 @@
+.reviews {
+  padding: 120px 0px;
+  &__container {
+    display: flex;
+    gap: 24px;
+  }
+  &__body {
+    padding: 32px 25px;
+    border-radius: 24px;
+    background-color: var(--gray);
+  }
+  &__item-title {
+    text-align: center;
+    margin: 0px 0px 115px 0px;
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    &._one {
+      justify-content: center;
+    }
+  }
+  &__item {
+    @include flex-center;
+    position: relative;
+    flex: 1;
+    max-width: 150px;
+    width: 100%;
+    padding: 55px 12px 12px 12px;
+    border-radius: 54px 54px 24px 24px;
+    background-color: var(--black);
+    z-index: 1;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 145px;
+      height: 130px;
+      background: url("@img/curve-arrow.svg") 0 0 / 100% auto no-repeat;
+      z-index: 1;
+      top: -16px;
+    }
+    &::before {
+      transform: scale(-1, 1);
+      left: -125px;
+    }
+    &::after {
+      right: -125px;
+    }
+  }
+  &__item-circle {
+    position: absolute;
+    top: -75px;
+    border: 3px solid var(--black);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: white;
+  }
+  &__item-circle-wrapper {
+    @include flex-center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    &::before {
+      position: absolute;
+      content: "";
+      inset: -10px;
+      border-radius: 50%;
+      border: 1px solid var(--black);
+      z-index: -1;
+    }
+  }
+  &__item-number {
+    @include flex-center;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border: 3px solid var(--black);
+    background-color: white;
+    border-radius: 50%;
+    top: -5px;
+    left: -5px;
+
+    color: var(--black);
+    font-size: 14px;
+    line-height: 16px;
+    z-index: 1;
+  }
+  &__item-icon {
+    &._gray {
+      filter: grayscale(1);
+    }
+  }
+  &__item-content {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    color: white;
+    text-align: center;
+  }
+}

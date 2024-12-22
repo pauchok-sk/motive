@@ -1,0 +1,8 @@
+<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 24 24" fill="none" id="icon-burger" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M22 7V5H2V7H22ZM22 9V11H2V9H22ZM22 15V13H2V15H22ZM22 19V17H2V19H22Z" fill="currentColor"/>
+</symbol><symbol viewBox="0 0 24 24" fill="none" id="icon-close" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 10.5858L18.364 4.22183L19.7782 5.63604L13.4143 12L19.7782 18.364L18.364 19.7782L12 13.4142L5.63608 19.7782L4.22187 18.364L10.5858 12L4.22187 5.63604L5.63608 4.22183L12 10.5858Z" fill="currentColor"/>
+</symbol><symbol viewBox="0 0 24 24" fill="none" id="icon-profile" xmlns="http://www.w3.org/2000/svg">
+<circle cx="4" cy="4" r="4" transform="matrix(-1 0 0 1 16 3)" stroke="currentColor" stroke-width="1.5"/>
+<path d="M5 16.9347C5 16.0743 5.54085 15.3068 6.35109 15.0175V15.0175C10.004 13.7128 13.996 13.7128 17.6489 15.0175V15.0175C18.4591 15.3068 19 16.0743 19 16.9347V18.2502C19 19.4376 17.9483 20.3498 16.7728 20.1818L15.8184 20.0455C13.2856 19.6837 10.7144 19.6837 8.18162 20.0455L7.22721 20.1818C6.0517 20.3498 5 19.4376 5 18.2502V16.9347Z" stroke="currentColor" stroke-width="1.5"/>
+</symbol></svg>

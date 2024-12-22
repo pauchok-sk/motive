@@ -1,0 +1,10 @@
+.body-hidden {
+  overflow: hidden;
+  touch-action: none;
+}
+.main {
+  padding-top: 80px;
+  @include laptop-middle {
+    padding-top: 85px;
+  }
+}

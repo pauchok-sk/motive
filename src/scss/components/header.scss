@@ -1,0 +1,171 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid var(--strore);
+  background-color: white;
+  z-index: 100;
+  @include laptop-middle {
+    padding: 8px 0px;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    display: block;
+    width: 160px;
+    margin-right: 64px;
+    @include laptop {
+      margin-right: 30px;
+    }
+  }
+  &__logo-img {
+    width: 100%;
+  }
+  &__burger {
+    @include flex-between;
+    gap: 30px;
+    flex: 1;
+    @include laptop-middle {
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 84px;
+      background-color: white;
+      padding: 32px 12px;
+      z-index: 100;
+      opacity: 0;
+      visibility: hidden;
+      transition:
+        opacity 0.4s ease,
+        visibility 0.4s ease;
+      &._open {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  &__burger-title {
+    display: none;
+    text-align: center;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    margin: 0px;
+    @include laptop-middle {
+      display: block;
+    }
+  }
+  &__nav {
+    flex: 1;
+  }
+  &__list {
+    display: flex;
+    gap: 32px;
+    @include laptop {
+      gap: 15px;
+    }
+    @include laptop-middle {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    a {
+      position: relative;
+      display: block;
+      padding: 30px 0px;
+
+      font-size: 16px;
+      font-weight: 500;
+
+      @include laptop-middle {
+        color: var(--black);
+        width: fit-content;
+        padding: 12px;
+        text-align: center;
+      }
+
+      @include hover {
+        &::before {
+          right: 0;
+        }
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        background-color: var(--main);
+        right: 100%;
+        left: 0;
+        bottom: -1px;
+        height: 2px;
+        transition: right 0.2s ease;
+      }
+    }
+  }
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    &._mobile {
+      display: none;
+    }
+
+    @include laptop-middle {
+      &._mobile {
+        margin-left: auto;
+        display: flex;
+      }
+    }
+    @include tablet-min {
+      &._mobile {
+        .btn-main {
+          display: none;
+        }
+      }
+    }
+    @include mobile {
+      .btn-main {
+        width: 100%;
+      }
+    }
+  }
+  &__burger-btn {
+    @include flex-center;
+    background-color: var(--main);
+    border: 1px solid var(--main);
+    color: white;
+    border-radius: 8px;
+    width: 48px;
+    height: 48px;
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
+    @include hover {
+      color: var(--main);
+      background-color: transparent;
+    }
+
+    &._active {
+      .header__burger-icon {
+        display: none;
+        &:nth-child(2) {
+          display: block;
+        }
+      }
+    }
+  }
+  &__burger-icon {
+    width: 24px;
+    height: 24px;
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+}
