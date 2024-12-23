@@ -1,24 +1,391 @@
 .reviews {
   padding: 120px 0px;
+  @include laptop {
+    padding: 95px 0px;
+  }
+  @include tablet {
+    padding: 50px 0px;
+  }
   &__container {
     display: flex;
     gap: 24px;
+    @include desktop {
+      justify-content: center;
+    }
+    @include laptop {
+      flex-wrap: wrap;
+      padding: 0 12px;
+    }
   }
   &__body {
     padding: 32px 25px;
     border-radius: 24px;
     background-color: var(--gray);
+    flex: 0 1 calc(50% - 12px);
+
+    &._main {
+      background-color: var(--main);
+      padding-left: 15px;
+      padding-right: 15px;
+
+      .reviews__item {
+        background-color: var(--main-light);
+
+        &._big {
+          max-width: 200px;
+        }
+      }
+      .reviews__item-number {
+        border-color: white;
+      }
+      .reviews__item-title {
+        color: white;
+      }
+      .reviews__item-circle {
+        border-color: white;
+        background-color: var(--main-light);
+      }
+      .reviews__item-circle-wrapper {
+        &::before {
+          border-color: white;
+        }
+      }
+
+      .reviews__row {
+        &._one {
+          .reviews__item {
+            &::before {
+              top: auto;
+              left: auto;
+              width: 300px;
+              height: 114px;
+              bottom: -110px;
+              background: url("@img/arrow-curve-two-w.svg") 0 0 / 100% auto
+                no-repeat;
+            }
+            &::after {
+              display: none;
+            }
+          }
+        }
+        &._arrows {
+          margin-left: 25px;
+          margin-right: 25px;
+          .reviews__item {
+            &::before,
+            &::after {
+              background: url("@img/arrow-w.png") 0 0 / 100% auto no-repeat;
+            }
+          }
+        }
+      }
+    }
+
+    @include desktop {
+      flex: 0 1 558px;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      &._main {
+        .reviews__row {
+          &._one {
+            .reviews__item {
+              &::before {
+                width: 249px;
+                height: 95px;
+                bottom: -90px;
+              }
+            }
+          }
+        }
+
+        .reviews__item {
+          &._big {
+            max-width: 180px;
+          }
+        }
+      }
+    }
+
+    @include laptop {
+      flex-basis: 720px;
+      padding-left: 30px;
+      padding-right: 30px;
+      &._main {
+        .reviews__row {
+          &._one {
+            margin-bottom: 130px;
+            .reviews__item {
+              &::before {
+                width: 346px;
+                height: 134px;
+                bottom: -128px;
+              }
+            }
+          }
+          &._arrows {
+            margin-bottom: 210px;
+            .reviews__item {
+              &::after {
+                width: 30px;
+                height: 126px;
+                bottom: -120px;
+              }
+            }
+          }
+        }
+        .reviews__item {
+          &._big {
+            max-width: 220px;
+          }
+        }
+      }
+    }
+
+    @include tablet {
+      padding-left: 20px;
+      padding-right: 20px;
+      flex-basis: 536px;
+
+      &._main {
+        .reviews__row {
+          &._one {
+            margin-bottom: 82px;
+            .reviews__item {
+              &::before {
+                width: 240px;
+                height: 91px;
+                bottom: -87px;
+              }
+            }
+          }
+          &._arrows {
+            margin-bottom: 175px;
+          }
+        }
+
+        .reviews__item {
+          &._big {
+            max-width: 170px;
+          }
+        }
+      }
+    }
+    @include tablet-min {
+      flex-basis: 350px;
+      padding: 20px 13px 15px 13px;
+
+      &._main {
+        .reviews__item {
+          &._big {
+            max-width: 110px;
+          }
+        }
+        .reviews__row {
+          &._one {
+            margin-bottom: 52px;
+            .reviews__item {
+              &::before {
+                width: 150px;
+                height: 59px;
+                bottom: -58px;
+              }
+            }
+          }
+          &._arrows {
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-bottom: 100px;
+            .reviews__row-content {
+              max-width: 110px;
+              transform: translateY(-23px);
+            }
+            .reviews__item {
+              &::after {
+                width: 16px;
+                height: 120px;
+                bottom: -115px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
   &__item-title {
     text-align: center;
     margin: 0px 0px 115px 0px;
+    @include tablet {
+      font-size: 24px;
+      margin-bottom: 80px;
+    }
+    @include tablet-min {
+      font-size: 20px;
+      margin-bottom: 65px;
+    }
   }
   &__row {
+    position: relative;
     display: flex;
+    align-items: start;
     justify-content: space-between;
-    width: 100%;
     &._one {
       justify-content: center;
+      margin-bottom: 113px;
+      .reviews__item {
+        &::before,
+        &::after {
+          width: 165px;
+          height: 140px;
+          background: url("@img/curve-arrow.svg") 0 0 / 100% auto no-repeat;
+          top: -20px;
+        }
+
+        &::before {
+          transform: scale(-1, 1);
+          left: -144px;
+        }
+        &::after {
+          right: -144px;
+        }
+      }
+    }
+    &._arrows {
+      margin: 0px 15px 183px 15px;
+      .reviews__item {
+        &::after {
+          width: 23px;
+          height: 116px;
+          background: url("@img/arrow.png") 0 0 / 100% auto no-repeat;
+        }
+        &::after {
+          bottom: -110px;
+        }
+      }
+      .reviews__row-content {
+        max-width: 175px;
+        transform: translateY(-55px);
+      }
+    }
+
+    @include desktop {
+      &._one {
+        margin-bottom: 86px;
+        .reviews__item {
+          &::before,
+          &::after {
+            width: 142px;
+            height: 119px;
+            top: -15px;
+          }
+          &::before {
+            left: -123px;
+          }
+          &::after {
+            right: -123px;
+          }
+        }
+      }
+      &._arrows {
+        margin-bottom: 160px;
+        margin-left: 12px;
+        margin-right: 12px;
+        .reviews__item {
+          &::after {
+            width: 25px;
+            height: 120px;
+            bottom: -115px;
+          }
+        }
+        .reviews__row-content {
+          transform: translateY(-43px);
+        }
+      }
+    }
+
+    @include laptop {
+      &._one {
+        margin-bottom: 122px;
+        .reviews__item {
+          &::after,
+          &::before {
+            width: 184px;
+            height: 154px;
+            top: -27px;
+          }
+          &::before {
+            left: -161px;
+          }
+          &::after {
+            right: -161px;
+          }
+        }
+      }
+
+      &._arrows {
+        margin-right: 16px;
+        margin-left: 16px;
+
+        .reviews__row-content {
+          max-width: 195px;
+          transform: translateY(-66px);
+        }
+      }
+    }
+
+    @include tablet {
+      &._one {
+        margin-bottom: 80px;
+        .reviews__item {
+          &::before,
+          &::after {
+            width: 137px;
+            height: 115px;
+            top: -13px;
+          }
+          &::before {
+            left: -121px;
+          }
+          &::after {
+            right: -121px;
+          }
+        }
+      }
+      &._arrows {
+        .reviews__row-content {
+          max-width: 150px;
+          transform: translateY(-38px);
+        }
+      }
+    }
+
+    @include tablet-min {
+      &._one {
+        margin-bottom: 38px;
+        .reviews__item {
+          &::before,
+          &::after {
+            width: 88px;
+            height: 73px;
+          }
+          &::before {
+            left: -76px;
+          }
+          &::after {
+            right: -76px;
+          }
+        }
+      }
+      &._arrows {
+        margin-right: 12px;
+        margin-left: 12px;
+        margin-bottom: 100px;
+        .reviews__item {
+          &::after {
+            width: 16px;
+          }
+        }
+      }
     }
   }
   &__item {
@@ -31,23 +398,48 @@
     border-radius: 54px 54px 24px 24px;
     background-color: var(--black);
     z-index: 1;
+    &._big {
+      max-width: 180px;
+    }
+    @include desktop {
+      max-width: 130px;
+      &._big {
+        max-width: 155px;
+      }
+    }
 
     &::before,
     &::after {
       position: absolute;
       content: "";
-      width: 145px;
-      height: 130px;
-      background: url("@img/curve-arrow.svg") 0 0 / 100% auto no-repeat;
       z-index: 1;
-      top: -16px;
     }
-    &::before {
-      transform: scale(-1, 1);
-      left: -125px;
+
+    @include laptop {
+      max-width: 165px;
+      padding-top: 65px;
+
+      &._big {
+        max-width: 200px;
+      }
     }
-    &::after {
-      right: -125px;
+    @include tablet {
+      padding-top: 55px;
+      max-width: 120px;
+      &._big {
+        max-width: 150px;
+      }
+    }
+    @include tablet-min {
+      padding-top: 40px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+      max-width: 80px;
+      border-radius: 28px 28px 12px 12px;
+      &._big {
+        max-width: 105px;
+      }
     }
   }
   &__item-circle {
@@ -58,6 +450,27 @@
     height: 120px;
     border-radius: 50%;
     background-color: white;
+
+    @include desktop {
+      width: 102px;
+      height: 102px;
+      top: -60px;
+    }
+    @include laptop {
+      width: 130px;
+      height: 130px;
+      top: -85px;
+    }
+    @include tablet {
+      width: 100px;
+      height: 100px;
+      top: -55px;
+    }
+    @include tablet-min {
+      width: 64px;
+      height: 64px;
+      top: -35px;
+    }
   }
   &__item-circle-wrapper {
     @include flex-center;
@@ -71,6 +484,9 @@
       border-radius: 50%;
       border: 1px solid var(--black);
       z-index: -1;
+      @include tablet-min {
+        inset: -7px;
+      }
     }
   }
   &__item-number {
@@ -88,10 +504,58 @@
     font-size: 14px;
     line-height: 16px;
     z-index: 1;
+
+    @include laptop {
+      top: -3px;
+      left: -3px;
+    }
+
+    @include tablet {
+      width: 25px;
+      height: 25px;
+      font-size: 12px;
+
+      top: -1px;
+      left: -1px;
+    }
+    @include tablet-min {
+      width: 20px;
+      height: 20px;
+      font-size: 10px;
+      top: -5px;
+      left: -5px;
+    }
   }
   &__item-icon {
     &._gray {
       filter: grayscale(1);
+    }
+
+    @include desktop {
+      max-width: 48px;
+      &._stars {
+        max-width: 85px;
+      }
+    }
+    @include laptop {
+      max-width: 60px;
+      &._stars {
+        max-width: 110px;
+      }
+    }
+
+    @include tablet {
+      max-width: 45px;
+      &._stars {
+        max-width: 80px;
+      }
+    }
+
+    @include tablet-min {
+      max-width: 30px;
+      &._stars {
+        max-width: 54px;
+      }
     }
   }
   &__item-content {
@@ -100,5 +564,80 @@
     margin: 0;
     color: white;
     text-align: center;
+
+    @include desktop {
+      font-weight: 400;
+      font-size: 14px;
+    }
+    @include laptop {
+      font-size: 16px;
+    }
+    @include tablet {
+      font-size: 14px;
+    }
+    @include tablet-min {
+      font-size: 9px;
+    }
+  }
+  &__row-content-wrapper {
+    @include flex-between;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -165px;
+    z-index: 1;
+    @include desktop {
+      top: -145px;
+    }
+    @include laptop {
+      top: -190px;
+    }
+    @include tablet {
+      top: -145px;
+    }
+    @include tablet-min {
+      top: -90px;
+      left: -5px;
+      right: -5px;
+    }
+  }
+  &__row-content {
+    position: relative;
+    padding: 16px 12px;
+    background-color: white;
+    border-radius: 12px;
+    max-width: 210px;
+    border: 1px solid var(--strore);
+
+    font-size: 14px;
+    line-height: 16px;
+    color: black;
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+    z-index: 10;
+
+    @include desktop {
+      max-width: 185px;
+      font-size: 13px;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+    @include laptop {
+      font-size: 14px;
+      padding: 20px 15px;
+      max-width: 220px;
+    }
+    @include tablet {
+      max-width: 175px;
+      font-size: 12px;
+      line-height: 14px;
+      padding: 15px 10px;
+    }
+    @include tablet-min {
+      font-size: 9px;
+      line-height: 10px;
+      padding: 10px 4px;
+      max-width: 125px;
+    }
   }
 }
