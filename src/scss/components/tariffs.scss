@@ -1,0 +1,111 @@
+.tariffs {
+  position: relative;
+  padding: 120px 0px;
+  &__popular {
+    position: absolute;
+    top: 270px;
+    right: calc(50% - 385px);
+    display: flex;
+    align-items: start;
+    gap: 32px;
+
+    color: var(--main);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+  &__arrow {
+  }
+  &__title {
+    text-align: center;
+    margin: 0px 0px 28px 0px;
+  }
+  &__nav {
+    border-radius: 8px;
+    background-color: var(--gray);
+    display: flex;
+    gap: 8px;
+    max-width: 330px;
+    width: 100%;
+    margin: 0px auto 80px auto;
+    padding: 4px;
+  }
+  &__btn {
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 12px 18px;
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
+    &._active {
+      color: white;
+      background-color: var(--main);
+    }
+    @include hover {
+      color: white;
+      background-color: var(--main);
+    }
+  }
+  &__slider {
+    box-sizing: border-box;
+    .swiper-wrapper {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 24px;
+    }
+  }
+  &__slide {
+    box-sizing: border-box;
+    grid-column: 4 span;
+    padding: 32px;
+    border-radius: 24px;
+    border: 1px solid var(--strore);
+
+    &._main {
+      background-color: var(--main);
+      color: white;
+
+      .tariffs__slide-price,
+      .tariffs__slide-title {
+        color: white;
+      }
+    }
+  }
+  &__slide-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 120%;
+    color: var(--black);
+    margin: 0px 0px 18px 0px;
+  }
+  &__slide-price {
+    display: block;
+    color: var(--main);
+    text-align: center;
+    margin-bottom: 32px;
+
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 120%;
+  }
+  &__slide-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+  &__slide-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  &__slide-item {
+    font-size: 18px;
+    font-weight: 500;
+    padding-left: 40px;
+    line-height: 25px;
+    background: url("@img/check-gray.svg") top 0 left 0 / 24px 24px no-repeat;
+  }
+}

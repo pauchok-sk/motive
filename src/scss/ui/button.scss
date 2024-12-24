@@ -48,7 +48,18 @@
     color: var(--main);
     @include hover {
       color: white;
-      background-color: transparent;
+      border-color: var(--black);
+      background-color: var(--black);
+    }
+  }
+  &._stroke-white {
+    border-color: white;
+    background-color: transparent;
+    color: white;
+    @include hover {
+      color: white;
+      border-color: var(--black);
+      background-color: var(--black);
     }
   }
 
