@@ -1,0 +1,19 @@
+.section-body {
+  position: relative;
+  overflow: hidden;
+  margin: 0 12px;
+  border-radius: 64px;
+  padding: 120px 0px;
+  background-color: var(--gray);
+  z-index: 1;
+  @include laptop {
+    margin: 0;
+    border-radius: 32px;
+  }
+  @include laptop-min {
+    padding: 50px 0px;
+  }
+  @include tablet {
+    border-radius: 16px;
+  }
+}

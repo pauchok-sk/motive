@@ -1,0 +1,122 @@
+.bot {
+  padding: 175px 0px;
+  @include tablet {
+    padding: 50px 0px;
+  }
+  &__container {
+    @include flex-center;
+    gap: 135px;
+    @include laptop-min {
+      gap: 48px;
+    }
+    @include tablet {
+      flex-direction: column-reverse;
+    }
+  }
+  &__tel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 11px 0px 4px 0px;
+    width: 315px;
+    height: 650px;
+    position: relative;
+    background: url("@img/frame-tel.png") 0 0 / 100% auto no-repeat;
+    @include laptop {
+      width: 250px;
+      height: 515px;
+    }
+    @include mobile {
+      width: 210px;
+      height: 435px;
+      padding-top: 5px;
+    }
+  }
+  &__tel-head {
+    position: relative;
+    width: calc(100% - 20px);
+    @include mobile {
+      width: calc(100% - 12px);
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      width: 90px;
+      height: 30px;
+      background: url("@img/camera.png") 0 0 / 100% auto no-repeat;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 10px;
+      z-index: 1;
+      @include laptop {
+        width: 70px;
+        height: 20px;
+        top: 8px;
+      }
+    }
+  }
+  &__tel-head-img {
+    position: relative;
+    width: 100%;
+    border-radius: 50px 50px 0px 0px;
+    height: auto;
+    @include laptop {
+      border-radius: 35px 35px 0px 0px;
+    }
+  }
+  &__tel-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 20px);
+    border-radius: 0px 0px 50px 50px;
+    background-color: var(--black);
+    flex: 1;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+    @include laptop {
+      border-radius: 0px 0px 30px 30px;
+    }
+    @include mobile {
+      width: calc(100% - 12px);
+    }
+  }
+  &__tel-img {
+    display: block;
+    width: 100%;
+    mask-repeat: no-repeat;
+  }
+  &__tel-info {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  &__tag {
+    margin-bottom: 32px;
+  }
+  &__title {
+    max-width: 665px;
+    margin: 0px 0px 32px 0px;
+    @include tablet {
+      max-width: 500px;
+    }
+  }
+  &__content {
+    max-width: 555px;
+    margin: 0px 0px 32px 0px;
+
+    @include laptop {
+      font-size: 16px;
+      max-width: 500px;
+    }
+  }
+  &__btn {
+    width: fit-content;
+  }
+}

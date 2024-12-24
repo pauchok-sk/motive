@@ -1,0 +1,100 @@
+.motivation {
+  &__decor {
+    position: absolute;
+    z-index: -1;
+    max-width: none;
+
+    &._big {
+      width: 745px;
+      left: -200px;
+      bottom: -288px;
+      transform: rotate(-74deg);
+    }
+    &._min {
+      width: 845px;
+      bottom: 20px;
+      right: -425px;
+    }
+
+    @include laptop {
+      &._big {
+        left: -228px;
+        bottom: -395px;
+      }
+      &._min {
+        display: none;
+      }
+    }
+    @include tablet {
+      &._big {
+        left: -180px;
+        bottom: -231px;
+        transform: rotate(-59deg);
+      }
+    }
+    @include tablet-min {
+      &._big {
+        bottom: -205px;
+      }
+    }
+    @include mobile {
+      &._big {
+        bottom: -130px;
+      }
+    }
+  }
+  &__container {
+    display: flex;
+    align-items: start;
+    gap: 40px;
+
+    @include laptop-min {
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+    }
+  }
+  &__info {
+    flex: 1;
+    @include laptop-min {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      flex: none;
+      width: 100%;
+    }
+  }
+  &__tag {
+    margin-bottom: 24px;
+  }
+  &__title {
+    margin: 0px 0px 24px 0px;
+    @include laptop-min {
+      max-width: 500px;
+    }
+  }
+  &__content {
+    margin: 0px 0px 48px 0px;
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+  &__btn {
+    width: fit-content;
+    font-size: 18px;
+  }
+  &__img {
+    width: 720px;
+    @include desktop {
+      width: 540px;
+    }
+    @include laptop-middle {
+      width: 480px;
+    }
+    @include tablet {
+      width: 360px;
+    }
+  }
+}

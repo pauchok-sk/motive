@@ -1,0 +1,130 @@
+.negative {
+  .section-body {
+    overflow: visible;
+    @include tablet {
+      overflow: hidden;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      inset: 0;
+      z-index: -1;
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &::before {
+      background: url("@img/frame-big.svg") 0 0 / 720px auto no-repeat;
+      @include laptop {
+        background-position: top 30px left -110px;
+      }
+    }
+    &::after {
+      background: url("@img/frame-min.svg") top 0 right -300px / 845px auto
+        no-repeat;
+      @include laptop {
+        background-position: top 30px right -780px;
+      }
+    }
+  }
+  &__container {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 30px;
+    @include tablet {
+      padding: 0;
+    }
+  }
+  &__info {
+    position: sticky;
+    top: 120px;
+    max-width: 555px;
+    @include laptop-min {
+      max-width: 400px;
+      top: 50px;
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+  &__tag {
+    margin-bottom: 32px;
+  }
+  &__title {
+    margin: 0px 0px 32px 0px;
+  }
+  &__contnet {
+    margin-bottom: 32px;
+    @include laptop-min {
+      font-size: 16px;
+    }
+  }
+  &__btn {
+    width: fit-content;
+  }
+  &__slider {
+    width: 315px;
+    height: fit-content;
+    overflow: visible;
+
+    @include laptop-min {
+      width: 250px;
+    }
+    @include tablet {
+      width: 100%;
+      padding: 0 15px !important;
+    }
+
+    .swiper-wrapper {
+      flex-direction: column;
+      gap: 120px;
+      @include laptop-min {
+        gap: 60px;
+      }
+      @include tablet {
+        gap: 0px;
+        flex-direction: row;
+      }
+    }
+    .swiper-slide {
+      @include tablet {
+        width: 350px !important;
+      }
+      @include tablet-min {
+        width: 330px !important;
+      }
+      @include mobile {
+        width: 280px !important;
+      }
+    }
+  }
+  &__img {
+    width: 315px;
+    height: auto;
+    @include tablet {
+      width: 210px;
+    }
+  }
+  &__slider-content {
+    display: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+    margin: 24px 0px 0px 0px;
+    @include tablet {
+      display: block;
+    }
+  }
+  &__pagination {
+    display: none;
+    margin-top: 32px;
+    @include tablet {
+      display: flex;
+    }
+  }
+}

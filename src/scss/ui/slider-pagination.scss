@@ -1,0 +1,21 @@
+.slider-pagination {
+  @include flex-center;
+  gap: 4px;
+  .swiper-pagination-bullet {
+    cursor: pointer;
+    width: 130px;
+    height: 4px;
+    border-radius: 100px;
+    background-color: var(--strore);
+    &.swiper-pagination-bullet-active {
+      background-color: var(--main);
+    }
+
+    @include tablet-min {
+      width: 110px;
+    }
+    @include mobile {
+      width: 80px;
+    }
+  }
+}

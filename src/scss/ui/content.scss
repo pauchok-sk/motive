@@ -1,5 +1,13 @@
 .content {
   font-size: 18px;
   font-weight: 500;
+  line-height: 22px;
   margin: 0; 
+
+  a {
+    transition: color .2s ease;
+    @include hover {
+      color: var(--main);
+    }
+  }
 }

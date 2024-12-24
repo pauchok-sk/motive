@@ -1,0 +1,62 @@
+.leave-review {
+  padding: 120px 0px;
+  @include laptop-min {
+    padding: 50px 0px;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+
+    @include laptop {
+      justify-content: space-between;
+      gap: 40px;
+    }
+    @include laptop-min {
+      flex-direction: column-reverse;
+      justify-content: center;
+      gap: 48px;
+    }
+  }
+  &__img {
+    width: 480px;
+    @include laptop {
+      width: 460px;
+    }
+  }
+  &__info {
+    flex: 0 1 610px;
+    @include laptop {
+      flex-basis: 560px;
+    }
+    @include laptop-min {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      flex: none;
+    }
+  }
+  &__tag {
+    margin-bottom: 24px;
+  }
+  &__title {
+    margin: 0px 0px 24px 0px;
+    @include laptop-min {
+      max-width: 520px;
+    }
+  }
+  &__content {
+    font-size: 18px;
+    margin: 0px 0px 48px 0px;
+    @include laptop {
+      font-size: 16px;
+    }
+    @include laptop-min {
+      max-width: 550px;
+    }
+  }
+  &__btn {
+    width: fit-content;
+  }
+}
