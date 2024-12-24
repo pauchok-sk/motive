@@ -1,5 +1,9 @@
 .qr {
   color: white;
+  margin-top: 24px;
+  @include tablet {
+    margin-top: 48px;
+  }
   &__body {
     padding: 195px 0px;
     @include laptop {

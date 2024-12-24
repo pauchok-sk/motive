@@ -1,0 +1,93 @@
+.help {
+  &__body {
+    padding-bottom: 168px;
+
+    @include laptop-min {
+      padding: 50px 0px;
+    }
+
+    .container {
+      @include laptop {
+        max-width: 1200px;
+        padding: 0 15px;
+      }
+    }
+  }
+  &__tag {
+    margin-bottom: 32px;
+  }
+  &__title {
+    margin: 0px 0px 64px 0px;
+    @include tablet {
+      text-align: center;
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+    @include tablet-min {
+      gap: 12px;
+    }
+  }
+  &__item {
+    grid-column: 3 span;
+    padding: 32px;
+    border-radius: 16px;
+    background-color: white;
+    &:nth-child(even) {
+      transform: translateY(48px);
+    }
+    @media (max-width: 1199px) {
+      padding: 20px;
+    }
+    @include laptop-min {
+      grid-column: 6 span;
+      padding: 32px;
+      &:nth-child(even) {
+        transform: translateY(0);
+      }
+    }
+    @include tablet-min {
+      grid-column: 12 span;
+    }
+  }
+  &__circle {
+    @include flex-center;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background-color: var(--pink);
+    margin-bottom: 48px;
+  }
+  &__circle-icon {
+    width: 24px;
+  }
+  &__item-content {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    color: var(--black);
+    margin: 0;
+    @include laptop {
+      font-size: 18px;
+      font-weight: 500;
+    }
+    @media (max-width: 1199px) {
+      font-size: 16px;
+      line-height: normal;
+    }
+    @include laptop-min {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 28px;
+    }
+    @media (max-width: 644px) {
+      font-size: 16px;
+      line-height: normal;
+    }
+    @include tablet-min {
+      font-size: 20px;
+    }
+  }
+}

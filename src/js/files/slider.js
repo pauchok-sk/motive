@@ -13,11 +13,36 @@ export default function slider() {
       slidesPerView: "auto",
       pagination: {
         el: ".negative__pagination",
-        clickable: true
+        clickable: true,
       },
       autoplay: {
         delay: 4000,
       },
+    });
+  }
+
+  const tariffsSliders = document.querySelectorAll(".tariffs__slider");
+
+  if (tariffsSliders.length && window.matchMedia("(max-width:1199px)").matches) {
+    tariffsSliders.forEach((slider) => {
+      const swiper = new Swiper(slider, {
+        speed: 700,
+        modules: [Autoplay, Pagination],
+        spaceBetween: 8,
+        slidesPerView: "auto",
+        pagination: {
+          el: slider.closest(".tab").querySelector(".tariffs__pagination"),
+          clickable: true,
+        },
+        autoplay: {
+          delay: 4000,
+        },
+        breakpoints: {
+          561: {
+            spaceBetween: 24,
+          },
+        },
+      });
     });
   }
 }

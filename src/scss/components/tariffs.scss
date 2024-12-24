@@ -1,18 +1,27 @@
 .tariffs {
   position: relative;
   padding: 120px 0px;
+  @media (max-width: 1199px) {
+    overflow: hidden;
+  }
+  @include laptop-min {
+    padding: 50px 0px;
+  }
   &__popular {
     position: absolute;
-    top: 270px;
-    right: calc(50% - 385px);
+    top: 260px;
+    right: calc(50% - 345px);
     display: flex;
     align-items: start;
-    gap: 32px;
+    gap: 12px;
 
     color: var(--main);
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
+    @media (max-width: 1199px) {
+      display: none;
+    }
   }
   &__arrow {
   }
@@ -29,12 +38,17 @@
     width: 100%;
     margin: 0px auto 80px auto;
     padding: 4px;
+    @include tablet {
+      max-width: none;
+      margin-bottom: 32px;
+    }
   }
   &__btn {
     border-radius: 8px;
+    flex: 1;
     font-size: 18px;
     font-weight: 500;
-    padding: 12px 18px;
+    padding: 12px 8px;
     transition:
       color 0.2s ease,
       background-color 0.2s ease;
@@ -49,10 +63,17 @@
   }
   &__slider {
     box-sizing: border-box;
+    @media (max-width: 1199px) {
+      overflow: visible !important;
+    }
     .swiper-wrapper {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       gap: 24px;
+      @media (max-width: 1199px) {
+        display: flex;
+        gap: 0;
+      }
     }
   }
   &__slide {
@@ -71,6 +92,12 @@
         color: white;
       }
     }
+    @media (max-width: 1199px) {
+      width: 410px !important;
+    }
+    @include tablet-min {
+      width: 320px !important;
+    }
   }
   &__slide-title {
     text-align: center;
@@ -79,6 +106,11 @@
     line-height: 120%;
     color: var(--black);
     margin: 0px 0px 18px 0px;
+    @include laptop {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 28px;
+    }
   }
   &__slide-price {
     display: block;
@@ -89,6 +121,11 @@
     font-size: 32px;
     font-weight: 600;
     line-height: 120%;
+    @include laptop {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 28px;
+    }
   }
   &__slide-buttons {
     display: flex;
@@ -107,5 +144,30 @@
     padding-left: 40px;
     line-height: 25px;
     background: url("@img/check-gray.svg") top 0 left 0 / 24px 24px no-repeat;
+    @include laptop {
+      font-size: 16px;
+    }
+  }
+  &__pagination {
+    display: none;
+    margin-top: 24px;
+    @media (max-width: 1199px) {
+      display: flex;
+    }
+  }
+
+  &__content {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--black);
+    line-height: 24px;
+    margin: 32px 0px 0px 0px;
+    @include laptop {
+      font-size: 16px;
+      line-height: normal;
+    }
+    @include tablet {
+      font-size: 14px;
+    }
   }
 }

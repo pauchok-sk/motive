@@ -1,16 +1,17 @@
 <header class="header">
   <div class="container header__container">
     <a href="/" class="header__logo">
-      <img src="@img/logo.svg" alt="logo" class="header__logo-img" />
+      <img src="@img/logo.png" alt="logo" class="header__logo-img" />
+      <span>Motive Review</span>
     </a>
     <div class="header__burger" id="burger">
       <h5 class="header__burger-title">Навигация</h5>
       <nav class="header__nav">
         <ul class="list header__list">
-          <li><a href="#">О сервисе</a></li>
-          <li><a href="#">Преимущества</a></li>
-          <li><a href="#">Как работает</a></li>
-          <li><a href="#">Тарифы</a></li>
+          <li><a href="#about" class="anchor">О сервисе</a></li>
+          <li><a href="#adv" class="anchor">Преимущества</a></li>
+          <li><a href="#work" class="anchor">Как работает</a></li>
+          <li><a href="#tariffs" class="anchor">Тарифы</a></li>
         </ul>
       </nav>
       <div class="header__buttons">
@@ -31,14 +32,14 @@
         <span>Войти</span>
       </button>
       <button class="btn-main">Демо</button>
-			<button class="header__burger-btn" id="burger-btn">
-				<svg class="header__burger-icon">
-					<use xlink:href='img/icons/icons.svg#icon-burger'></use>
-				</svg>
-				<svg class="header__burger-icon">
-					<use xlink:href='img/icons/icons.svg#icon-close'></use>
-				</svg>
-			</button>
+      <button class="header__burger-btn" id="burger-btn">
+        <svg class="header__burger-icon">
+          <use xlink:href="img/icons/icons.svg#icon-burger"></use>
+        </svg>
+        <svg class="header__burger-icon">
+          <use xlink:href="img/icons/icons.svg#icon-close"></use>
+        </svg>
+      </button>
     </div>
   </div>
 </header>

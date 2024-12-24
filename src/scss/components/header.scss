@@ -14,15 +14,24 @@
     align-items: center;
   }
   &__logo {
-    display: block;
-    width: 160px;
+    display: flex;
+    align-items: center;
+    max-width: 160px;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 21px;
+    color: var(--main);
     margin-right: 64px;
     @include laptop {
       margin-right: 30px;
     }
+    span {
+      display: block;
+    }
   }
   &__logo-img {
-    width: 100%;
+    width: 64ox;
   }
   &__burger {
     @include flex-between;
