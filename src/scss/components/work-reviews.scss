@@ -1,0 +1,106 @@
+.work-reviews {
+  &__body {
+    padding: 90px 0px;
+    @include laptop {
+      padding: 50px 0px;
+    }
+  }
+  &__decor {
+    position: absolute;
+    z-index: -1;
+    max-width: none;
+
+    &._big {
+      width: 745px;
+      left: -300px;
+      bottom: -470px;
+      transform: rotate(-74deg);
+    }
+    &._min {
+      width: 845px;
+      bottom: -178px;
+      right: -398px;
+    }
+
+    @include laptop {
+      &._min {
+        display: none;
+      }
+    }
+    @include tablet {
+      &._big {
+        left: -174px;
+        bottom: -210px;
+        transform: rotate(-63deg);
+      }
+    }
+    @include tablet-min {
+      &._big {
+        left: -100px;
+        bottom: -194px;
+        transform: rotate(-50deg);
+      }
+    }
+    @include mobile {
+      &._big {
+        bottom: -229px;
+      }
+    }
+  }
+  &__container {
+    @include flex-between;
+    gap: 40px;
+    @include laptop {
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+  &__info {
+    max-width: 655px;
+    @include tablet {
+      max-width: none;
+    }
+  }
+  &__tag {
+    margin-bottom: 32px;
+    @include laptop {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  &__title {
+    max-width: 600px;
+    margin: 0px 0px 32px 0px;
+    @include laptop {
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  &__item {
+    padding-left: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    background: url("@img/check.svg") top 0 left 0 / 24px 24px no-repeat;
+
+    span {
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+  &__img {
+    width: 500px;
+    @include laptop-middle {
+      width: 350px;
+    }
+    @include laptop {
+      width: 520px;
+    }
+  }
+}
