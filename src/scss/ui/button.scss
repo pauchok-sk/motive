@@ -23,8 +23,9 @@
 
   transition: color .2s ease, background-color .2s ease, border-color .2s ease;
   @include hover {
-    color: var(--main);
-    background-color: transparent;
+    color: white;
+    background-color: var(--black);
+    border-color: var(--black);
   }
 
   &._big {
@@ -37,8 +38,17 @@
     color: var(--black);
     @include hover {
       border-color: var(--main);
-      background-color: var(--main);
+      color: var(--main);
+    }
+  }
+
+  &._white {
+    border-color: white;
+    background-color: white;
+    color: var(--main);
+    @include hover {
       color: white;
+      background-color: transparent;
     }
   }
 

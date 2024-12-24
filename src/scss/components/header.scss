@@ -139,7 +139,7 @@
   &__burger-btn {
     @include flex-center;
     background-color: var(--main);
-    border: 1px solid var(--main);
+    border: none;
     color: white;
     border-radius: 8px;
     width: 48px;
@@ -148,8 +148,7 @@
       color 0.2s ease,
       background-color 0.2s ease;
     @include hover {
-      color: var(--main);
-      background-color: transparent;
+      background-color: var(--black);
     }
 
     &._active {

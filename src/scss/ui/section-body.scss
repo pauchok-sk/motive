@@ -16,4 +16,8 @@
   @include tablet {
     border-radius: 16px;
   }
+
+  &._main {
+    background-color: var(--main);
+  }
 }

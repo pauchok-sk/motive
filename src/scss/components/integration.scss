@@ -1,0 +1,83 @@
+.integration {
+  padding: 95px 0px;
+  @include laptop-min {
+    padding: 50px 0px;
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 24px;
+    @include laptop {
+      gap: 12px;
+    }
+    @include laptop-min {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+    }
+    @include tablet {
+      gap: 12px;
+    }
+  }
+  &__title {
+    margin: 0;
+    @include laptop-min {
+      width: 100%;
+      text-align: center;
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+    @include tablet {
+      margin-bottom: 12px;
+    }
+  }
+  &__block {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 12px;
+    background-color: var(--gray);
+    border-radius: 12px;
+    @include tablet {
+      padding: 8px 12px;
+      flex: 0 1 244px;
+    }
+    @include tablet-min {
+      flex-basis: calc(50% - 6px);
+    }
+    @include mobile {
+      flex-basis: 100%;
+    }
+  }
+  &__block-title {
+    &._wh {
+      color: #009b1a;
+    }
+    &._tg {
+      color: #0098ed;
+    }
+    @include tablet {
+      font-size: 24px;
+      flex: 1;
+    }
+  }
+  &__block-icon {
+    width: 65px;
+    @include tablet {
+      width: 43px;
+    }
+  }
+  &__content {
+    @include laptop-min {
+      max-width: 495px;
+      text-align: center;
+      margin: 8px auto 0px auto;
+    }
+    @include tablet {
+      margin-top: 20px;
+    }
+  }
+}
