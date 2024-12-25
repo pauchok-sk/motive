@@ -601,7 +601,7 @@ body {
 }
 .reviews__body._main .reviews__row._arrows .reviews__item::after,
 .reviews__body._main .reviews__row._arrows .reviews__item::before {
-  background: url(../img/arrow-w.webp) 0 0/100% auto no-repeat
+  background: url(../img/arrow-w.png) 0 0/100% auto no-repeat
 }
 .reviews__item-title {
   text-align: center;
@@ -638,7 +638,7 @@ body {
 .reviews__row._arrows .reviews__item::after {
   width: 23px;
   height: 116px;
-  background: url(../img/arrow.webp) 0 0/100% auto no-repeat
+  background: url(../img/arrow.png) 0 0/100% auto no-repeat
 }
 .reviews__row._arrows .reviews__item::after {
   bottom: -110px
@@ -905,7 +905,7 @@ body {
   width: 315px;
   height: 650px;
   position: relative;
-  background: url(../img/frame-tel.webp) 0 0/100% auto no-repeat
+  background: url(../img/frame-tel.png) 0 0/100% auto no-repeat
 }
 .bot__tel-head {
   position: relative;
@@ -916,7 +916,7 @@ body {
   content: "";
   width: 90px;
   height: 30px;
-  background: url(../img/camera.webp) 0 0/100% auto no-repeat;
+  background: url(../img/camera.png) 0 0/100% auto no-repeat;
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
