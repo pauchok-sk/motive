@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>pauchoo0k</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap&_v=20241225142738" rel="stylesheet" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20241225142738" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="body">
+	<header class="header">
+		<div class="container header__container">
+			<a href="/" class="header__logo">
+				<img src="img/logo.webp" alt="logo" class="header__logo-img" />
+				<span>Motive Review</span>
+			</a>
+			<div class="header__burger" id="burger">
+				<h5 class="header__burger-title">Навигация</h5>
+				<nav class="header__nav">
+					<ul class="list header__list">
+						<li><a href="#about" class="anchor">О сервисе</a></li>
+						<li><a href="#adv" class="anchor">Преимущества</a></li>
+						<li><a href="#work" class="anchor">Как работает</a></li>
+						<li><a href="#tariffs" class="anchor">Тарифы</a></li>
+					</ul>
+				</nav>
+				<div class="header__buttons">
+					<button class="btn-main _stroke">
+						<svg class="btn-main__icon">
+							<use xlink:href="img/icons/icons.svg#icon-profile"></use>
+						</svg>
+						<span>Войти</span>
+					</button>
+					<a href="#connection" class="btn-main anchor">Попробовать бесплатно</a>
+				</div>
+			</div>
+			<div class="header__buttons _mobile">
+				<button class="btn-main _stroke">
+					<svg class="btn-main__icon">
+						<use xlink:href="img/icons/icons.svg#icon-profile"></use>
+					</svg>
+					<span>Войти</span>
+				</button>
+				<button class="btn-main">Демо</button>
+				<button class="header__burger-btn" id="burger-btn">
+					<svg class="header__burger-icon">
+						<use xlink:href="img/icons/icons.svg#icon-burger"></use>
+					</svg>
+					<svg class="header__burger-icon">
+						<use xlink:href="img/icons/icons.svg#icon-close"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</header>
+
+	<main class="main">
+
+		<section class="intro">
+			<div class="container intro__container">
+				<div class="intro__main">
+					<h1 class="title-1 intro__title">Motive.Review</h1>
+					<h2 class="intro__subtitle">
+						Платформа для сбора отзывов и мотивации обратной связи <br />
+						<span>от клиентов</span>
+					</h2>
+					<p class="content intro__content">
+						Проверка и управление отзывами на Яндекс.Картах, 2ГИС и самых популярных
+						интернет-ресурсах.
+					</p>
+					<div class="intro__buttons">
+						<a href="#" class="btn-main">Демо</a>
+						<a href="#" class="btn-main _stroke">Зарегистрироваться</a>
+					</div>
+				</div>
+				<picture class="intro__img">
+					<source srcset="img/hero-mobile.webp" media="(max-width: 993px)" />
+					<img src="img/hero.webp" alt="image" />
+				</picture>
+			</div>
+		</section>
+
+		<section class="skills" id="about">
+			<div class="section-body">
+				<img src="img/frame-big.svg" alt="image" class="skills__decor _big">
+				<img src="img/frame-min.svg" alt="image" class="skills__decor _min">
+				<div class="container">
+					<span class="section-tag skills__tag">teg</span>
+					<h2 class="title-2 skills__title">Возможности сервиса</h2>
+					<ul class="list skills__list">
+						<li class="skills__item">
+							<div class="skills__item-circle">
+								<img src="img/s-1.svg" alt="icon" class="skills__item-icon" />
+							</div>
+							<h5 class="skills__item-title">Сбор отзывов с популярных площадок</h5>
+							<p class="content">
+								Получайте оповещения о свежих отзывах в Telegram
+							</p>
+						</li>
+						<li class="skills__item">
+							<div class="skills__item-circle">
+								<img src="img/s-2.svg" alt="icon" class="skills__item-icon" />
+							</div>
+							<h5 class="skills__item-title">
+								Настоящие отзывы от реальных клиентов
+							</h5>
+							<p class="content">
+								Увеличение числа положительных отзывов на площадках
+							</p>
+						</li>
+						<li class="skills__item">
+							<div class="skills__item-circle">
+								<img src="img/s-3.svg" alt="icon" class="skills__item-icon" />
+							</div>
+							<h5 class="skills__item-title">
+								Повышение рейтинга компании на картах
+							</h5>
+							<p class="content">
+								Увеличится количество новых клиентов и прибыль. Повысится доверие к
+								компании
+							</p>
+						</li>
+						<li class="skills__item">
+							<div class="skills__item-circle">
+								<img src="img/s-4.svg" alt="icon" class="skills__item-icon" />
+							</div>
+							<h5 class="skills__item-title">
+								Улучшение сервиса и контроль за сотрудниками
+							</h5>
+							<p class="content">
+								Если сотрудники некачественно оказали услугу, то клиент напишет в
+								анонимной форме.
+								<br />
+								<br />
+								Вы узнаете, что было не так, уладите с ним данный вопрос. И клиент
+								не оставит плохой отзыв!
+							</p>
+						</li>
+						<li class="skills__item">
+							<div class="skills__item-circle">
+								<img src="img/s-5.svg" alt="icon" class="skills__item-icon" />
+							</div>
+							<h5 class="skills__item-title">
+								Работа с отзывами влияет на место вашего сайта в поисковой выдачи
+							</h5>
+							<p class="content">
+								Высокие оценки, регулярное появление новых отзывов от ваших клиентов
+								и ответы на них положительно влияют место в поисковой выдаче
+							</p>
+						</li>
+						<li class="skills__item">
+							<div class="skills__item-circle">
+								<img src="img/s-6.svg" alt="icon" class="skills__item-icon" />
+							</div>
+							<h5 class="skills__item-title">
+								Несколько вариантов мотивации оставить отзыв
+							</h5>
+							<p class="content">
+								Возможность предложить бонус за оставленный отзыв в виде пополнения
+								баланса мобильного телефона или промокода на бонус или скидку
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="reviews" id="work">
+			<div class="container reviews__container">
+				<div class="reviews__body">
+					<h2 class="title-3 reviews__item-title">Отзывы без Motive.Review</h2>
+					<div class="reviews__row _one">
+						<div class="reviews__item">
+							<div class="reviews__item-circle">
+								<div class="reviews__item-circle-wrapper">
+									<span class="reviews__item-number">01</span>
+									<img src="img/smile-simple.webp" alt="icon" class="reviews__item-icon _gray" />
+								</div>
+							</div>
+							<p class="reviews__item-content">Ваш клиент</p>
+						</div>
+					</div>
+					<div class="reviews__row _arrows">
+						<div class="reviews__item">
+							<div class="reviews__item-circle">
+								<div class="reviews__item-circle-wrapper">
+									<span class="reviews__item-number">02</span>
+									<img src="img/smile-bad.webp" alt="icon" class="reviews__item-icon _gray" />
+								</div>
+							</div>
+							<p class="reviews__item-content">Клиент не доволен</p>
+						</div>
+						<div class="reviews__item">
+							<div class="reviews__item-circle">
+								<div class="reviews__item-circle-wrapper">
+									<span class="reviews__item-number">02</span>
+									<img src="img/smile-love.webp" alt="icon" class="reviews__item-icon" />
+								</div>
+							</div>
+							<p class="reviews__item-content">
+								Клиент <br />
+								доволен
+							</p>
+						</div>
+					</div>
+					<div class="reviews__row">
+						<div class="reviews__item _big">
+							<div class="reviews__item-circle">
+								<div class="reviews__item-circle-wrapper">
+									<span class="reviews__item-number">03</span>
+									<img src="img/reviews-bad.webp" alt="icon" class="reviews__item-icon _stars" />
+								</div>
+							</div>
+							<p class="reviews__item-content">
+								Оставляет негативный отзыв на публичных площадках
+							</p>
+						</div>
+						<div class="reviews__item _big">
+							<div class="reviews__item-circle">
+								<div class="reviews__item-circle-wrapper">
+									<span class="reviews__item-number">03</span>
+									<img src="img/close-red.webp" alt="icon" class="reviews__item-icon" />
+								</div>
+							</div>
+							<p class="reviews__item-content">Не мотивирован оставлять отзыв</p>
+						</div>
+					</div>
+				</div>
+				<div class="reviews__body _main">
+					<h2 class="title-3 reviews__item-title">Отзывы с Motive.Review</h2>
+					<div class="reviews__row _one">
+						<div class="reviews__item">
+							<div class="reviews__item-circle">
+								<div class="reviews__item-circle-wrapper">
+									<span class="reviews__item-number">01</span>
+									<img src="img/smile-simple.webp" alt="icon" class="reviews__item-icon" />
+								</div>
+							</div>
+							<p class="reviews__item-content">Ваш клиент</p>
+						</div>
+					</div>
+					<div class="reviews__row _arrows">
+						<div class="reviews__item">
+							<div class="reviews__item-circle">
+								<div class="reviews__item-circle-wrapper">
+									<span class="reviews__item-number">02</span>
+									<img src="img/smile-bad.webp" alt="icon" class="reviews__item-icon" />
+								</div>
+							</div>
+							<p class="reviews__item-content">Клиент не доволен</p>
+						</div>
+						<p class="reviews__row-content">
+							Получает сообщение с просьбой оставить отзыв
+						</p>
+						<div class="reviews__item">
+							<div class="reviews__item-circle">
+								<div class="reviews__item-circle-wrapper">
+									<span class="reviews__item-number">02</span>
+									<img src="img/smile-love.webp" alt="icon" class="reviews__item-icon" />
+								</div>
+							</div>
+							<p class="reviews__item-content">
+								Клиент <br />
+								доволен
+							</p>
+						</div>
+					</div>
+					<div class="reviews__row">
+						<div class="reviews__row-content-wrapper">
+							<p class="reviews__row-content">
+								Клиент попадает на страницу обратной связи
+							</p>
+							<p class="reviews__row-content">
+								Motive.Review мотивирует оставить отзыв
+							</p>
+						</div>
+						<div class="reviews__item _big">
+							<div class="reviews__item-circle">
+								<div class="reviews__item-circle-wrapper">
+									<span class="reviews__item-number">03</span>
+									<img src="img/heart-repair.webp" alt="icon" class="reviews__item-icon" />
+								</div>
+							</div>
+							<p class="reviews__item-content">
+								Клиенту оперативно помогают решить его проблему
+							</p>
+						</div>
+						<div class="reviews__item _big">
+							<div class="reviews__item-circle">
+								<div class="reviews__item-circle-wrapper">
+									<span class="reviews__item-number">03</span>
+									<img src="img/reviews-good.webp" alt="icon" class="reviews__item-icon _stars" />
+								</div>
+							</div>
+							<p class="reviews__item-content">
+								Оставляет положительный отзыв на одной из публичных площадок
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="motivation">
+			<div class="section-body">
+				<img src="img/frame-big.svg" alt="image" class="motivation__decor _big">
+				<img src="img/frame-min.svg" alt="image" class="motivation__decor _min">
+				<div class="container motivation__container">
+					<div class="motivation__info">
+						<span class="section-tag motivation__tag">Мотивация</span>
+						<h2 class="title-2 motivation__title">
+							Дополнительная мотивация клиентов <span>оставить отзыв</span>
+						</h2>
+						<p class="content motivation__content">
+							Вы сможете настроить получение бонуса для ваших клиентов за
+							оставленный отзыв. Бонусом может быть – определённая сумма на баланс
+							телефона, промокод из вашего списка или промокод сгенерированный нашей
+							системой на любой бонус, который вы сможете предоставить своим
+							клиентам.
+						</p>
+						<a href="#connection" class="btn-main motivation__btn _big anchor">Попробовать бесплатно</a>
+					</div>
+					<picture class="motivation__img">
+						<source srcset="img/motivation-2.webp" media="(max-width: 744px)" />
+						<img src="img/motivation.webp" alt="image" class="motivation__img" />
+					</picture>
+				</div>
+			</div>
+		</section>
+
+		<section class="leave-review">
+			<div class="container leave-review__container">
+				<img src="img/leave-review.webp" alt="image" class="leave-review__img" />
+				<div class="leave-review__info">
+					<span class="section-tag leave-review__tag _gray">Напоминание</span>
+					<h2 class="title-2 leave-review__title">
+						Motive.Review напомнит клиентам <span>оставить отзыв</span>
+					</h2>
+					<p class="content leave-review__content">
+						Для каждого вашего филиала будет сформирована короткая ссылка вида
+						<a href="https://motive.review/tst" target="_blank">https://motive.review/tst</a>
+						<br />
+						<br />
+						Вы сможете отправлять её клиентам после совершения заказа с просьбой
+						оставить отзыв или настроить автоматическую отправку таких сообщений в
+						нашей системе.
+					</p>
+					<a href="#connection" class="btn-main leave-review__btn _big anchor">Попробовать бесплатно</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="negative" id="work">
+			<div class="section-body">
+				<div class="container negative__container">
+					<div class="negative__info">
+						<span class="section-tag negative__tag _gray">Статистика</span>
+						<h2 class="title-2 negative__title">Перехват негатива</h2>
+						<p class="content negative__contnet">
+							Перейдя по ссылке или отсканировав QR-код, вашему клиенту будет
+							предложено поставить оценку.
+						</p>
+						<a href="#connection" class="btn-main negative__btn _big anchor">Попробовать бесплатно</a>
+					</div>
+					<div class="swiper negative__slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="img/n-1.webp" alt="image" class="negative__img" />
+								<p class="negative__slider-content">
+									Перейдя по ссылке или отсканировав QR-код, вашему клиенту будет
+									предложено поставить оценку.
+								</p>
+							</div>
+							<div class="swiper-slide">
+								<img src="img/n-2.webp" alt="image" class="negative__img" />
+								<p class="negative__slider-content">
+									Если ваш клиент поставит оценку меньше 5 ⭐, то ему будет показана
+									форма, в которой он сможет оставить свои замечания и получить
+									обратную связь, тем самым негативный отзыв не оставлен на
+									публичных площадках.
+								</p>
+							</div>
+							<div class="swiper-slide">
+								<img src="img/n-3.webp" alt="image" class="negative__img" />
+								<p class="negative__slider-content">
+									Если клиент поставить оценку 5 ⭐, то ему будет предложено
+									оставить отзыв с получением бонуса через Telegram бота или
+									оставить отзыв без бонуса по прямым ссылкам.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slider-pagination negative__pagination"></div>
+			</div>
+		</section>
+
+		<section class="bot">
+			<div class="container bot__container">
+				<div class="bot__tel">
+					<div class="bot__tel-head">
+						<img src="img/tel-head.webp" alt="image" class="bot__tel-head-img" />
+					</div>
+					<div class="bot__tel-wrapper">
+						<img src="img/tg.webp" alt="image" class="bot__tel-img" />
+						<img src="img/tg.webp" alt="image" class="bot__tel-img" />
+						<img src="img/tg.webp" alt="image" class="bot__tel-img" />
+					</div>
+				</div>
+				<div class="bot__tel-info">
+					<span class="section-tag bot__tag _gray"> teg </span>
+					<h2 class="title-2 bot__title">Пример диалога из Telegram бота</h2>
+					<p class="content bot__content">
+						Если клиент поставить оценку 5 ⭐, то ему будет предложено оставить
+						отзыв с получением бонуса через Telegram бота или оставить отзыв без
+						бонуса по прямым ссылкам.
+					</p>
+					<a href="#connection" class="btn-main _big bot__btn anchor">Попробовать бесплатно</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="work-reviews">
+			<div class="section-body work-reviews__body">
+				<img src="img/frame-big.svg" alt="image" class="work-reviews__decor _big" />
+				<img src="img/frame-min.svg" alt="image" class="work-reviews__decor _min" />
+				<div class="container work-reviews__container">
+					<div class="work-reviews__info">
+						<span class="section-tag work-reviews__tag _gray">Статистика</span>
+						<h2 class="title-2 work-reviews__title">
+							Почему работа с отзывами — <span>это важно?</span>
+						</h2>
+						<ul class="list work-reviews__list">
+							<li class="work-reviews__item">
+								<span>9 из 10</span> клиентов ориентируются на отзывы при выборе
+								товаров и услуг. Низкие рейтинги и негативные отзывы отпугивают
+								покупателей, высокие рейтинги и положительные отзывы привлекают.
+							</li>
+							<li class="work-reviews__item">
+								<span>94%</span> клиентов выбирают организации на картах с рейтингом
+								не ниже 4 и большим количеством отзывов.
+							</li>
+							<li class="work-reviews__item">
+								Недовольные клиенты чаще оставляют комментарии, чем люди довольные
+								услугами.
+							</li>
+						</ul>
+					</div>
+					<img src="img/work-reviews.svg" alt="images" class="work-reviews__img" />
+				</div>
+			</div>
+		</section>
+
+		<section class="qr">
+			<div class="section-body _main qr__body">
+				<img src="img/frame-big-p.svg" alt="decor" class="qr__decor _big">
+				<img src="img/frame-min-p.svg" alt="decor" class="qr__decor _min">
+				<div class="container qr__container">
+					<div class="qr__info">
+						<h2 class="qr__title">Собирайте отзывы с помощью QR-кода</h2>
+						<p class="qr__content">
+							Разместите QR-код на ресепшене, на столиках в кафе и ресторанах, на
+							любом видном месте, где будут ваши клиенты
+						</p>
+						<a href="#" class="btn-main _white _big qr__btn">Зарегистрироваться</a>
+					</div>
+					<img src="img/qr.webp" alt="image" class="qr__img" />
+				</div>
+			</div>
+		</section>
+
+		<section class="integration">
+			<div class="container">
+				<div class="integration__wrapper">
+					<span class="title-2 integration__title">Интеграция с</span>
+					<div class="integration__block">
+						<span class="title-2 integration__block-title _wh">WhatsApp</span>
+						<img src="img/wh.webp" alt="image" class="integration__block-icon" />
+					</div>
+					<span class="title-2 integration__title">и</span>
+					<div class="integration__block">
+						<span class="title-2 integration__block-title _tg">Telegram</span>
+						<img src="img/tg.webp" alt="image" class="integration__block-icon" />
+					</div>
+				</div>
+				<p class="integration__content content">
+					Автоматизируйте отправку сообщений через WhatsApp и Telegram. Начните
+					улучшать показатели своего бизнеса
+				</p>
+			</div>
+		</section>
+
+		<section class="tariffs" id="tariffs">
+			<div class="container tab-container">
+				<div class="tariffs__popular">
+					<img src="img/arrow.svg" alt="arrow" class="tariffs__arrow" /><span>Самое популярное!</span>
+				</div>
+				<h2 class="title-2 tariffs__title">Тарифные планы</h2>
+				<div class="tariffs__nav">
+					<button data-tab-btn="month" class="btn tariffs__btn _active">
+						Ежемесячно
+					</button>
+					<button data-tab-btn="discount" class="btn tariffs__btn">
+						Ежегодно -30%
+					</button>
+				</div>
+				<div data-tab="month" class="tab _open">
+					<div class="swiper tariffs__slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide tariffs__slide">
+								<h5 class="tariffs__slide-title">Персональный</h5>
+								<span class="tariffs__slide-price">99 ₽/мес</span>
+								<div class="tariffs__slide-buttons">
+									<a href="#connection" class="btn-main _big anchor">Попробовать бесплатно</a>
+									<a href="#" class="btn-main _big _stroke">Подробнее</a>
+								</div>
+								<ul class="list tariffs__slide-list">
+									<li class="tariffs__slide-item">Компания с 1 филиалом</li>
+									<li class="tariffs__slide-item">
+										Обновление отзывов - ежедневно
+									</li>
+									<li class="tariffs__slide-item">
+										Уведомление о новых отзывах в Telegram и на почту
+									</li>
+									<li class="tariffs__slide-item">
+										Перехват негативных отзывов для повышения рейтинга
+									</li>
+								</ul>
+							</div>
+							<div class="swiper-slide tariffs__slide _main">
+								<h5 class="tariffs__slide-title">Оптимальный</h5>
+								<span class="tariffs__slide-price">199 ₽/мес</span>
+								<div class="tariffs__slide-buttons">
+									<a href="#connection" class="btn-main _big _white anchor">Попробовать бесплатно</a>
+									<a href="#" class="btn-main _big _stroke-white">Подробнее</a>
+								</div>
+								<ul class="list tariffs__slide-list">
+									<li class="tariffs__slide-item">Компания с 1 филиалом</li>
+									<li class="tariffs__slide-item">
+										Обновление отзывов - ежедневно
+									</li>
+									<li class="tariffs__slide-item">
+										Уведомление о новых отзывах в Telegram и на почту
+									</li>
+									<li class="tariffs__slide-item">
+										Перехват негативных отзывов для повышения рейтинга
+									</li>
+								</ul>
+							</div>
+							<div class="swiper-slide tariffs__slide">
+								<h5 class="tariffs__slide-title">Бизнес</h5>
+								<span class="tariffs__slide-price">от 499 ₽/мес</span>
+								<div class="tariffs__slide-buttons">
+									<a href="#connection" class="btn-main _big anchor">Попробовать бесплатно</a>
+									<a href="#" class="btn-main _big _stroke">Подробнее</a>
+								</div>
+								<ul class="list tariffs__slide-list">
+									<li class="tariffs__slide-item">Компания с 1 филиалом</li>
+									<li class="tariffs__slide-item">
+										Обновление отзывов - ежедневно
+									</li>
+									<li class="tariffs__slide-item">
+										Уведомление о новых отзывах в Telegram и на почту
+									</li>
+									<li class="tariffs__slide-item">
+										Перехват негативных отзывов для повышения рейтинга
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="slider-pagination tariffs__pagination"></div>
+				</div>
+				<div data-tab="discount" class="tab">
+					<div class="swiper tariffs__slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide tariffs__slide">
+								<h5 class="tariffs__slide-title">Персональный 1</h5>
+								<span class="tariffs__slide-price">99 ₽/мес</span>
+								<div class="tariffs__slide-buttons">
+									<a href="#connection" class="btn-main _big anchor">Попробовать бесплатно</a>
+									<a href="#" class="btn-main _big _stroke">Подробнее</a>
+								</div>
+								<ul class="list tariffs__slide-list">
+									<li class="tariffs__slide-item">Компания с 1 филиалом</li>
+									<li class="tariffs__slide-item">
+										Обновление отзывов - ежедневно
+									</li>
+									<li class="tariffs__slide-item">
+										Уведомление о новых отзывах в Telegram и на почту
+									</li>
+									<li class="tariffs__slide-item">
+										Перехват негативных отзывов для повышения рейтинга
+									</li>
+								</ul>
+							</div>
+							<div class="swiper-slide tariffs__slide _main">
+								<h5 class="tariffs__slide-title">Оптимальный</h5>
+								<span class="tariffs__slide-price">199 ₽/мес</span>
+								<div class="tariffs__slide-buttons">
+									<a href="#connection" class="btn-main _big _white anchor">Попробовать бесплатно</a>
+									<a href="#" class="btn-main _big _stroke-white">Подробнее</a>
+								</div>
+								<ul class="list tariffs__slide-list">
+									<li class="tariffs__slide-item">Компания с 1 филиалом</li>
+									<li class="tariffs__slide-item">
+										Обновление отзывов - ежедневно
+									</li>
+									<li class="tariffs__slide-item">
+										Уведомление о новых отзывах в Telegram и на почту
+									</li>
+									<li class="tariffs__slide-item">
+										Перехват негативных отзывов для повышения рейтинга
+									</li>
+								</ul>
+							</div>
+							<div class="swiper-slide tariffs__slide">
+								<h5 class="tariffs__slide-title">Бизнес</h5>
+								<span class="tariffs__slide-price">от 499 ₽/мес</span>
+								<div class="tariffs__slide-buttons">
+									<a href="#connection" class="btn-main _big anchor">Попробовать бесплатно</a>
+									<a href="#" class="btn-main _big _stroke">Подробнее</a>
+								</div>
+								<ul class="list tariffs__slide-list">
+									<li class="tariffs__slide-item">Компания с 1 филиалом</li>
+									<li class="tariffs__slide-item">
+										Обновление отзывов - ежедневно
+									</li>
+									<li class="tariffs__slide-item">
+										Уведомление о новых отзывах в Telegram и на почту
+									</li>
+									<li class="tariffs__slide-item">
+										Перехват негативных отзывов для повышения рейтинга
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="slider-pagination tariffs__pagination"></div>
+				</div>
+				<p class="tariffs__content">
+					СМС вашему клиенту с предложением оставить отзыв – 15 руб. <br />
+					WhastApp сообщение с предложением оставить отзыв – 6 руб. <br />
+					Отзыв оставленный с мотивационным бонусом для клиента – 35 руб. (если
+					бонусом является пополнение баланса мобильного телефона клиента, <br />
+					взимается комиссия 20% от суммы пополнения)
+				</p>
+			</div>
+		</section>
+
+		<section class="help" id="adv">
+			<div class="section-body help__body">
+				<div class="container">
+					<span class="section-tag help__tag">teg</span>
+					<h2 class="title-2 help__title">
+						<span>Motive.Review</span> поможет Вам:
+					</h2>
+					<ul class="list help__list">
+						<li class="help__item">
+							<div class="help__circle">
+								<img src="img/h-1.svg" alt="icon" class="help__circle-icon" />
+							</div>
+							<p class="help__item-content">
+								Улучшить рейтинги вашего бизнеса в онлайне
+							</p>
+						</li>
+						<li class="help__item">
+							<div class="help__circle">
+								<img src="img/h-2.svg" alt="icon" class="help__circle-icon" />
+							</div>
+							<p class="help__item-content">
+								Получить реальную обратную связь от клиентов для дальнейшего развития
+							</p>
+						</li>
+						<li class="help__item">
+							<div class="help__circle">
+								<img src="img/h-3.svg" alt="icon" class="help__circle-icon" />
+							</div>
+							<p class="help__item-content">
+								Сэкономить время и ресурсы на работу с отзывами
+							</p>
+						</li>
+						<li class="help__item">
+							<div class="help__circle">
+								<img src="img/h-4.svg" alt="icon" class="help__circle-icon" />
+							</div>
+							<p class="help__item-content">
+								Увеличить трафик из поисковиков и карт за счёт высокого рейтинга и отзывов
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="real">
+			<div class="container real__container">
+				<div class="real__info">
+					<span class="section-tag real__tag _gray">Внимание</span>
+					<h2 class="title-2 real__title">
+						Мы не пишем заказные отзывы, а помогаем получать больше реальных отзывов
+						от ваших клиентов
+					</h2>
+					<a href="#connection" class="btn-main real__btn anchor">Попробовать бесплатно</a>
+				</div>
+				<img src="img/real.svg" alt="image" class="real__img">
+			</div>
+		</section>
+
+		<section class="connection" id="connection">
+			<div class="section-body _main connection__body">
+				<img src="img/frame-big-p.svg" alt="decor" class="connection__decor _big">
+				<img src="img/frame-min-p.svg" alt="decor" class="connection__decor _min">
+				<div class="container">
+					<h2 class="connection__title">
+						Подключайтесь к Motive.Review уже сегодня
+					</h2>
+					<p class="connection__content">
+						Заполните форму ниже или свяжитесь с нами удобным способом — наш
+						специалист проконсультирует вас по работе платформы и поможет получить
+						доступ к сервису.
+					</p>
+					<form action="#" class="connection__form">
+						<div class="connection__form-item">
+							<label for="name" class="connection__input-name"> Имя </label>
+							<input type="text" placeholder="Иван" id="name" required class="connection__input" />
+						</div>
+						<div class="connection__form-item">
+							<label for="name-company" class="connection__input-name">
+								Название компании
+							</label>
+							<input type="text" placeholder="Motive.Review" id="name-company" required class="connection__input" />
+						</div>
+						<div class="connection__form-item">
+							<label for="tel" class="connection__input-name"> Телефон </label>
+							<input type="tel" placeholder="+7 800 555 44 33" id="tel" required class="connection__input _err" />
+						</div>
+						<div class="connection__form-item">
+							<label for="mail" class="connection__input-name"> Почта </label>
+							<input type="email" placeholder="ivan@gmail.com" id="mail" required class="connection__input _success" />
+						</div>
+						<div class="connection__form-item _fill">
+							<label for="address" class="connection__input-name">
+								Адрес сайта
+							</label>
+							<input type="text" placeholder="Motive.Review.ru" id="address" required class="connection__input" />
+						</div>
+						<button class="btn-main _white connection__btn _big">
+							Зарегистрироваться
+						</button>
+					</form>
+					<p class="connection__form-content">
+						Нажимая на кнопку «Зарегистрироваться» вы подтверждаете, что
+						ознакомились с Политикой конфиденциальности и Пользовательским
+						соглашением и согласны и на обработку персональных данных
+					</p>
+				</div>
+			</div>
+		</section>
+
+
+	</main>
+	<footer class="footer">
+		<div class="section-body footer__body">
+			<div class="container">
+				<div class="footer__top">
+					<div class="footer__main">
+						<a href="/" class="footer__logo">
+							<img src="img/logo.webp" alt="logo" class="footer__logo-img" />
+							<span>Motive Review</span>
+						</a>
+						<div class="footer__buttons">
+							<a href="#connection" class="btn-main footer__btn anchor _big">Попробовать бесплатно</a>
+							<a href="#" class="btn-main _stroke footer__btn">
+								<svg class="btn-main__icon">
+									<use xlink:href="img/icons/icons.svg#icon-profile"></use>
+								</svg>
+								<span>Войти</span>
+							</a>
+						</div>
+					</div>
+					<nav class="footer__item">
+						<h5 class="footer__item-title">Навигация</h5>
+						<ul class="list footer__list">
+							<li><a href="#about" class="anchor">О сервисе</a></li>
+							<li><a href="#adv" class="anchor">Преимущества</a></li>
+							<li><a href="#work" class="anchor">Как работает</a></li>
+							<li><a href="#tariffs" class="anchor">Тарифы</a></li>
+						</ul>
+					</nav>
+					<div class="footer__item">
+						<h5 class="footer__item-title">Контакты</h5>
+						<a href="#" target="_blank" class="footer__contacts-btn">
+							<svg class="footer__contacts-icon">
+								<use xlink:href="img/icons/icons.svg#icon-wh"></use>
+							</svg>
+							<span>WhatsApp</span>
+						</a>
+						<a href="#" target="_blank" class="footer__contacts-btn">
+							<svg class="footer__contacts-icon">
+								<use xlink:href="img/icons/icons.svg#icon-tg"></use>
+							</svg>
+							<span>Telegram</span>
+						</a>
+						<div class="footer__contacts-item">
+							<span class="footer__contacts-title">Телефон для подключений:</span>
+							<a href="tel:88005554433" class="footer__contacts-soc">8 800 555 44 33</a>
+						</div>
+						<div class="footer__contacts-item">
+							<span class="footer__contacts-title">Почта:</span>
+							<a href="tel:88005554433" class="footer__contacts-soc">ivan@gmail.com</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<p class="footer__bottom-content">© Motive.Review 2024 Все права защищены</p>
+					<a href="#" class="footer__bottom-content">Договор оферты</a>
+					<a href="#" class="footer__bottom-content">Политика конфиденциальности</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/app.min.js?_v=20241225142738"></script>
+</body>
+
+</html>

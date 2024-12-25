@@ -1,0 +1,137 @@
+.connection {
+  color: white;
+  &__body {
+    padding: 95px 0px;
+  }
+  &__decor {
+    position: absolute;
+    max-width: none;
+    z-index: -1;
+    &._big {
+      width: 745px;
+      left: 115px;
+      bottom: -30px;
+    }
+    &._min {
+      right: -25px;
+      top: -115px;
+      width: 665px;
+    }
+
+    @include laptop {
+      &._big {
+        bottom: -45px;
+      }
+      &._min {
+        right: -640px;
+      }
+    }
+    @include tablet {
+      &._big {
+        bottom: -115px;
+      }
+      &._min {
+        display: none;
+      }
+    }
+    @include tablet-min {
+      &._big {
+        bottom: 150px;
+      }
+    }
+    @include mobile {
+      &._big {
+        bottom: 165px;
+      }
+    }
+  }
+  &__title {
+    text-align: center;
+    max-width: 895px;
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 100%;
+    margin: 0px auto 20px auto;
+
+    @include laptop {
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 120%;
+    }
+  }
+  &__content {
+    max-width: 895px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0px auto 32px auto;
+    @include laptop {
+      max-width: 730px;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    row-gap: 32px;
+    max-width: 895px;
+    margin: 0 auto;
+  }
+  &__form-item {
+    flex: 0 1 calc(50% - 12px);
+    @include tablet-min {
+      flex-basis: 100%;
+    }
+
+    &._fill {
+      flex-basis: 100%;
+    }
+  }
+  &__input-name {
+    display: block;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 6px;
+  }
+  &__input {
+    background-color: white;
+    border: 1px solid var(--strore);
+    min-height: 48px;
+    padding: 5px 16px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--black);
+
+    &::placeholder {
+      color: var(--light);
+    }
+
+    &._success {
+      color: var(--green);
+      background: url("@img/check-g.svg") center right 16px / 10px 10px
+        no-repeat;
+      background-color: white;
+    }
+    &._err {
+      color: var(--red);
+      background: url("@img/close.svg") center right 16px / 10px 10px no-repeat;
+      background-color: white;
+    }
+  }
+  &__btn {
+    margin: 0 auto;
+    @include tablet {
+      width: 100%;
+    }
+  }
+  &__form-content {
+    max-width: 510px;
+    margin: 32px auto 0px auto;
+    text-align: center;
+    font-size: 12px;
+  }
+}

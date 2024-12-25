@@ -1,0 +1,164 @@
+.footer {
+  &__body {
+    padding: 120px 0px 48px 0px;
+    @include tablet {
+      padding-top: 95px;
+      background-color: transparent;
+    }
+  }
+  &__top {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 64px;
+    @include tablet {
+      flex-wrap: wrap;
+      row-gap: 48px;
+    }
+  }
+  &__main {
+    flex: 1;
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 0 1 100%;
+    }
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 160px;
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 21px;
+    color: var(--main);
+  }
+  &__logo-img {
+    width: 65px;
+  }
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 255px;
+    margin-top: 115px;
+    @include tablet {
+      margin-top: 48px;
+      max-width: none;
+      width: 100%;
+    }
+  }
+  &__btn {
+  }
+  &__item {
+    flex: 1;
+    @include laptop-min {
+      flex: 0 1 200px;
+    }
+    @include tablet {
+      flex-basis: calc(50% - 12px);
+    }
+    @include tablet-min {
+      text-align: center;
+      flex-basis: 100%;
+    }
+  }
+  &__item-title {
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0px 0px 20px 0px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include tablet-min {
+      justify-content: center;
+      align-items: center;
+    }
+
+    a {
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--black);
+      transition: color 0.2s ease;
+      @include hover {
+        color: var(--main);
+      }
+    }
+  }
+  &__contacts-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+    width: fit-content;
+
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--black);
+    transition: color 0.2s ease;
+    @include hover {
+      color: var(--main);
+    }
+    @include tablet-min {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  &__contacts-icon {
+    width: 32px;
+    height: 32px;
+  }
+  &__contacts-item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  &__contacts-title {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+  &__contacts-soc {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--black);
+    transition: color 0.2s ease;
+    @include hover {
+      color: var(--main);
+    }
+  }
+  &__bottom {
+    @include flex-between;
+    flex-wrap: wrap;
+    gap: 32px;
+    padding-top: 64px;
+    border-top: 1px solid var(--strore);
+    @include tablet {
+      flex-direction: column;
+      align-items: start;
+    }
+    @include tablet-min {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    a {
+      transition: color .2s ease;
+      @include hover {
+        color: var(--main);
+      }
+    }
+  }
+  &__bottom-content {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    color: var(--black);
+  }
+}
