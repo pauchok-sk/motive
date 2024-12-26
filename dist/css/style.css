@@ -224,7 +224,7 @@ body {
 }
 .btn-main._stroke {
   border-color: var(--strore);
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0,0,0,0)!important;
   color: var(--black)
 }
 .btn-main._white {
@@ -511,7 +511,7 @@ body {
   right: -195px
 }
 .skills__tag {
-  margin-bottom: 12px
+  margin-bottom: 12px!important
 }
 .skills__title {
   margin: 0 0 64px 0
@@ -805,7 +805,7 @@ body {
   flex: 0 1 610px
 }
 .leave-review__tag {
-  margin-bottom: 24px
+  margin-bottom: 24px!important
 }
 .leave-review__title {
   margin: 0 0 24px 0
@@ -820,20 +820,10 @@ body {
   width: fit-content
 }
 .negative .section-body {
-  overflow: visible
-}
-.negative .section-body::after,
-.negative .section-body::before {
-  position: absolute;
-  content: "";
-  inset: 0;
-  z-index: -1
-}
-.negative .section-body::before {
-  background: url(../img/frame-big.svg) 0 0/720px auto no-repeat
-}
-.negative .section-body::after {
-  background: url(../img/frame-min.svg) top 0 right -300px/845px auto no-repeat
+  overflow: visible;
+  background: url(../img/frame-big.svg) top 30px left -110px/720px auto no-repeat,url(../img/frame-min.svg) top 0 right -300px/845px auto no-repeat;
+  background-attachment: fixed;
+  background-color: var(--gray)
 }
 .negative__container {
   display: flex;
@@ -847,7 +837,7 @@ body {
   max-width: 555px
 }
 .negative__tag {
-  margin-bottom: 32px
+  margin: 0 0 32px 0!important
 }
 .negative__title {
   margin: 0 0 32px 0
@@ -948,7 +938,7 @@ body {
   mask-repeat: no-repeat
 }
 .bot__tag {
-  margin-bottom: 32px
+  margin-bottom: 32px!important
 }
 .bot__title {
   max-width: 665px;
@@ -993,7 +983,7 @@ body {
   max-width: 655px
 }
 .work-reviews__tag {
-  margin-bottom: 32px
+  margin-bottom: 32px!important
 }
 .work-reviews__title {
   max-width: 600px;
@@ -1216,7 +1206,7 @@ body {
   padding-bottom: 168px
 }
 .help__tag {
-  margin-bottom: 32px
+  margin-bottom: 32px!important
 }
 .help__title {
   margin: 0 0 64px 0
@@ -1268,7 +1258,7 @@ body {
   flex: 0 1 795px
 }
 .real__tag {
-  margin-bottom: 32px
+  margin-bottom: 32px!important
 }
 .real__title {
   margin: 0 0 32px 0
@@ -1331,6 +1321,9 @@ body {
 .connection__form-item._fill {
   flex-basis: 100%
 }
+.connection__form-item .just-validate-error-label {
+  display: none!important
+}
 .connection__input-name {
   display: block;
   font-size: 14px;
@@ -1361,15 +1354,27 @@ body {
 .connection__input::placeholder {
   color: var(--light)
 }
-.connection__input._success {
+.connection__input.just-validate-success-field {
   color: var(--green);
   background: url(../img/check-g.svg) center right 16px/10px 10px no-repeat;
   background-color: #fff
 }
-.connection__input._err {
+.connection__input.just-validate-error-field {
   color: var(--red);
   background: url(../img/close.svg) center right 16px/10px 10px no-repeat;
   background-color: #fff
+}
+.connection__input.just-validate-error-field::-webkit-input-placeholder {
+  color: var(--red)
+}
+.connection__input.just-validate-error-field:-ms-input-placeholder {
+  color: var(--red)
+}
+.connection__input.just-validate-error-field::-ms-input-placeholder {
+  color: var(--red)
+}
+.connection__input.just-validate-error-field::placeholder {
+  color: var(--red)
 }
 .connection__btn {
   margin: 0 auto
@@ -1938,11 +1943,8 @@ body {
   .leave-review__content {
     font-size: 16px
   }
-  .negative .section-body::before {
-    background-position: top 30px left -110px
-  }
-  .negative .section-body::after {
-    background-position: top 30px right -780px
+  .negative .section-body {
+    background-position: top 30px left -110px,top 30px right -780px
   }
   .bot__tel {
     width: 250px;
@@ -1969,18 +1971,8 @@ body {
   .work-reviews__decor._min {
     display: none
   }
-  .work-reviews__container {
-    flex-direction: column;
-    gap: 24px
-  }
-  .work-reviews__tag {
-    margin-left: auto;
-    margin-right: auto
-  }
-  .work-reviews__title {
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto
+  .work-reviews__info {
+    max-width: 475px
   }
   .work-reviews__img {
     width: 520px
@@ -2100,7 +2092,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    top: 84px;
+    top: 81px;
     background-color: #fff;
     padding: 32px 12px;
     z-index: 100;
@@ -2141,6 +2133,23 @@ body {
   }
   .motivation__img {
     width: 480px
+  }
+  .work-reviews__container {
+    flex-direction: column;
+    gap: 24px
+  }
+  .work-reviews__info {
+    max-width: none
+  }
+  .work-reviews__tag {
+    margin-left: auto;
+    margin-right: auto
+  }
+  .work-reviews__title {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center
   }
   .work-reviews__img {
     width: 350px
@@ -2230,10 +2239,10 @@ body {
     padding: 50px 0
   }
   .qr__body .container {
-    padding: 0 16px
+    padding: 0 30px
   }
   .qr__img {
-    width: 380px
+    width: 330px
   }
   .integration {
     padding: 50px 0
@@ -2421,16 +2430,19 @@ body {
     width: 360px
   }
   .negative .section-body {
-    overflow: hidden
-  }
-  .negative .section-body::after,
-  .negative .section-body::before {
-    display: none
+    overflow: hidden;
+    background: 0 0;
+    background-color: var(--gray)
   }
   .negative__container {
-    padding: 0
+    padding: 0;
+    flex-direction: column;
+    padding-left: 15px
   }
   .negative__info {
+    position: static
+  }
+  .negative__contnet {
     display: none
   }
   .negative__slider {
@@ -2479,6 +2491,9 @@ body {
   }
   .qr {
     margin-top: 48px
+  }
+  .qr__body .container {
+    padding: 0 15px
   }
   .qr__decor._big {
     bottom: -200px
@@ -2613,6 +2628,9 @@ body {
     top: -245px;
     left: -225px;
     bottom: auto
+  }
+  .skills__list {
+    gap: 8px
   }
   .skills__item {
     grid-column: 12 span
@@ -2795,6 +2813,9 @@ body {
   }
   .motivation__decor._big {
     bottom: -130px
+  }
+  .motivation__btn {
+    width: 100%
   }
   .negative__slider .swiper-slide {
     width: 280px!important

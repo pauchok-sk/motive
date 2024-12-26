@@ -12,7 +12,12 @@
     @include laptop-min {
       padding: 50px 0px;
       .container {
-        padding: 0 16px;
+        padding: 0 30px;
+      }
+    }
+    @include tablet {
+      .container {
+        padding: 0 15px;
       }
     }
   }
@@ -124,7 +129,7 @@
       width: 450px;
     }
     @include laptop-min {
-      width: 380px;
+      width: 330px;
     }
     @include tablet {
       width: 470px;

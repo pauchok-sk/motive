@@ -1,34 +1,18 @@
 .negative {
   .section-body {
     overflow: visible;
+    background:
+      url("@img/frame-big.svg") top 30px left -110px / 720px auto no-repeat,
+      url("@img/frame-min.svg") top 0 right -300px / 845px auto no-repeat;
+    background-attachment: fixed;
+    background-color: var(--gray);
+    @include laptop {
+      background-position: top 30px left -110px, top 30px right -780px;
+    }
     @include tablet {
       overflow: hidden;
-    }
-
-    &::before,
-    &::after {
-      position: absolute;
-      content: "";
-      inset: 0;
-      z-index: -1;
-
-      @include tablet {
-        display: none;
-      }
-    }
-
-    &::before {
-      background: url("@img/frame-big.svg") 0 0 / 720px auto no-repeat;
-      @include laptop {
-        background-position: top 30px left -110px;
-      }
-    }
-    &::after {
-      background: url("@img/frame-min.svg") top 0 right -300px / 845px auto
-        no-repeat;
-      @include laptop {
-        background-position: top 30px right -780px;
-      }
+      background: none;
+      background-color: var(--gray);
     }
   }
   &__container {
@@ -38,6 +22,8 @@
     gap: 30px;
     @include tablet {
       padding: 0;
+      flex-direction: column;
+      padding-left: 15px;
     }
   }
   &__info {
@@ -49,11 +35,12 @@
       top: 50px;
     }
     @include tablet {
-      display: none;
+      position: static;
     }
   }
   &__tag {
-    margin-bottom: 32px;
+    margin: 0px 0px 32px 0px !important;
+
   }
   &__title {
     margin: 0px 0px 32px 0px;
@@ -62,6 +49,9 @@
     margin-bottom: 32px;
     @include laptop-min {
       font-size: 16px;
+    }
+    @include tablet {
+      display: none;
     }
   }
   &__btn {

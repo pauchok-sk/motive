@@ -39,7 +39,7 @@
     }
   }
   &__tag {
-    margin-bottom: 12px;
+    margin-bottom: 12px !important;
   }
   &__title {
     margin: 0px 0px 64px 0px;
@@ -51,6 +51,9 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 24px;
+    @include tablet-min {
+      gap: 8px;
+    }
   }
   &__item {
     padding: 24px;

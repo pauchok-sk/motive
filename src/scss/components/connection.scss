@@ -86,6 +86,10 @@
     &._fill {
       flex-basis: 100%;
     }
+
+    .just-validate-error-label {
+      display: none !important;
+    }
   }
   &__input-name {
     display: block;
@@ -110,16 +114,20 @@
       color: var(--light);
     }
 
-    &._success {
+    &.just-validate-success-field {
       color: var(--green);
       background: url("@img/check-g.svg") center right 16px / 10px 10px
         no-repeat;
       background-color: white;
     }
-    &._err {
+    &.just-validate-error-field {
       color: var(--red);
       background: url("@img/close.svg") center right 16px / 10px 10px no-repeat;
       background-color: white;
+
+      &::placeholder {
+        color: var(--red);
+      }
     }
   }
   &__btn {

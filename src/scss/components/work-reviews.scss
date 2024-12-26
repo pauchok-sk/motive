@@ -50,20 +50,26 @@
   &__container {
     @include flex-between;
     gap: 40px;
-    @include laptop {
+    @include laptop-middle {
       flex-direction: column;
       gap: 24px;
     }
   }
   &__info {
     max-width: 655px;
+    @include laptop {
+      max-width: 475px;
+    }
+    @include laptop-middle {
+      max-width: none;
+    }
     @include tablet {
       max-width: none;
     }
   }
   &__tag {
-    margin-bottom: 32px;
-    @include laptop {
+    margin-bottom: 32px !important;
+    @include laptop-middle {
       margin-left: auto;
       margin-right: auto;
     }
@@ -71,10 +77,11 @@
   &__title {
     max-width: 600px;
     margin: 0px 0px 32px 0px;
-    @include laptop {
+    @include laptop-middle {
       max-width: 500px;
       margin-left: auto;
       margin-right: auto;
+      text-align: center;
     }
   }
   &__list {
