@@ -1,8 +1,13 @@
 .content {
   font-size: 18px;
   font-weight: 500;
-  line-height: 22px;
+  line-height: 24px;
   margin: 0; 
+
+  @include laptop {
+    font-size: 16px;
+    line-height: 22px;
+  }
 
   a {
     transition: color .2s ease;

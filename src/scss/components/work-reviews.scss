@@ -91,14 +91,15 @@
   }
   &__item {
     padding-left: 40px;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 20px;
+    line-height: 24px;
+    font-size: 18px;
+    font-weight: 500;
     background: url("@img/check.svg") top 0 left 0 / 24px 24px no-repeat;
 
     span {
-      font-size: 18px;
-      font-weight: 500;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--main);
     }
   }
   &__img {

@@ -276,7 +276,7 @@ body {
 .content {
   font-size: 18px;
   font-weight: 500;
-  line-height: 22px;
+  line-height: 24px;
   margin: 0
 }
 .content a {
@@ -596,8 +596,8 @@ body {
   display: none
 }
 .reviews__body._main .reviews__row._arrows {
-  margin-left: 25px;
-  margin-right: 25px
+  margin-left: 27px;
+  margin-right: 27px
 }
 .reviews__body._main .reviews__row._arrows .reviews__item::after,
 .reviews__body._main .reviews__row._arrows .reviews__item::before {
@@ -926,6 +926,7 @@ body {
   border-radius: 0 0 50px 50px;
   background-color: var(--black);
   flex: 1;
+  scrollbar-width: none;
   overflow-y: auto
 }
 .bot__tel-wrapper::-webkit-scrollbar {
@@ -996,14 +997,15 @@ body {
 }
 .work-reviews__item {
   padding-left: 40px;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 20px;
+  line-height: 24px;
+  font-size: 18px;
+  font-weight: 500;
   background: url(../img/check.svg) top 0 left 0/24px 24px no-repeat
 }
 .work-reviews__item span {
-  font-size: 18px;
-  font-weight: 500
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--main)
 }
 .work-reviews__img {
   width: 500px
@@ -1049,7 +1051,8 @@ body {
   max-width: 510px;
   margin: 0 0 32px 0;
   font-size: 18px;
-  font-weight: 500
+  font-weight: 500;
+  line-height: 24px
 }
 .qr__btn {
   width: -webkit-fit-content;
@@ -1749,14 +1752,14 @@ body {
     right: -123px
   }
   .reviews__row._arrows {
-    margin-bottom: 160px;
+    margin-bottom: 179px;
     margin-left: 12px;
     margin-right: 12px
   }
   .reviews__row._arrows .reviews__item::after {
     width: 25px;
-    height: 120px;
-    bottom: -115px
+    height: 125px;
+    bottom: -120px
   }
   .reviews__row._arrows .reviews__row-content {
     -webkit-transform: translateY(-43px);
@@ -1784,7 +1787,7 @@ body {
     font-size: 14px
   }
   .reviews__row-content-wrapper {
-    top: -145px
+    top: -160px
   }
   .reviews__row-content {
     max-width: 185px;
@@ -1804,6 +1807,10 @@ body {
   }
   .title-2 {
     font-size: 32px
+  }
+  .content {
+    font-size: 16px;
+    line-height: 22px
   }
   .section-body {
     margin: 0;
@@ -1855,14 +1862,6 @@ body {
     height: 134px;
     bottom: -128px
   }
-  .reviews__body._main .reviews__row._arrows {
-    margin-bottom: 210px
-  }
-  .reviews__body._main .reviews__row._arrows .reviews__item::after {
-    width: 30px;
-    height: 126px;
-    bottom: -120px
-  }
   .reviews__body._main .reviews__item._big {
     max-width: 220px
   }
@@ -1883,12 +1882,17 @@ body {
   }
   .reviews__row._arrows {
     margin-right: 16px;
-    margin-left: 16px
+    margin-left: 16px;
+    margin-bottom: 204px
   }
   .reviews__row._arrows .reviews__row-content {
     max-width: 195px;
     -webkit-transform: translateY(-66px);
     transform: translateY(-66px)
+  }
+  .reviews__row._arrows .reviews__item::after {
+    width: 25px;
+    height: 125px
   }
   .reviews__item {
     max-width: 165px;
@@ -2380,6 +2384,9 @@ body {
     -webkit-transform: translateY(-38px);
     transform: translateY(-38px)
   }
+  .reviews__row._arrows {
+    margin-bottom: 174px
+  }
   .reviews__item {
     padding-top: 55px;
     max-width: 120px
@@ -2654,7 +2661,7 @@ body {
   .reviews__body._main .reviews__row._arrows {
     margin-left: 15px;
     margin-right: 15px;
-    margin-bottom: 100px
+    margin-bottom: 109px
   }
   .reviews__body._main .reviews__row._arrows .reviews__row-content {
     max-width: 110px;
@@ -2687,7 +2694,7 @@ body {
   .reviews__row._arrows {
     margin-right: 12px;
     margin-left: 12px;
-    margin-bottom: 100px
+    margin-bottom: 109px
   }
   .reviews__row._arrows .reviews__item::after {
     width: 16px
