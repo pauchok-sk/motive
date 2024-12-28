@@ -33,6 +33,14 @@
     @include tablet {
       margin-bottom: 12px;
     }
+
+    span {
+      color: inherit;
+      margin-left: 15px;
+      @include tablet {
+        margin-left: 0;
+      }
+    }
   }
   &__block {
     display: flex;

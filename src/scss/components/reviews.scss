@@ -565,6 +565,7 @@
   &__item-content {
     font-size: 16px;
     font-weight: 500;
+    line-height: 20px;
     margin: 0;
     color: white;
     text-align: center;
@@ -572,15 +573,19 @@
     @include desktop {
       font-weight: 400;
       font-size: 14px;
+      line-height: 18px;
     }
     @include laptop {
       font-size: 16px;
+      line-height: 20px;
     }
     @include tablet {
       font-size: 14px;
+      line-height: 18px;
     }
     @include tablet-min {
       font-size: 9px;
+      line-height: 13px;
     }
   }
   &__row-content-wrapper {

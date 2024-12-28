@@ -57,6 +57,9 @@
   }
   &__btn {
     width: fit-content;
+    @include tablet {
+      display: none;
+    }
   }
   &__slider {
     width: 315px;
