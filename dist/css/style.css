@@ -937,7 +937,11 @@ body {
   display: block;
   width: 100%;
   -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat
+  mask-repeat: no-repeat;
+  pointer-events: none;
+  -ms-user-select: all;
+  -webkit-user-select: all;
+  user-select: all
 }
 .bot__tag {
   margin-bottom: 32px!important

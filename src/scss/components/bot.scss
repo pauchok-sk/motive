@@ -89,6 +89,11 @@
     display: block;
     width: 100%;
     mask-repeat: no-repeat;
+    pointer-events: none;
+    -ms-user-select: all;
+    -moz-user-select: all;
+    -webkit-user-select: all;
+    user-select: all;
   }
   &__tel-info {
     @include tablet {

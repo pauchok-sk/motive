@@ -10,6 +10,7 @@ import tab from "./files/tab.js";
 import anchors from "./files/anchors.js";
 import validate from "./files/validate.js";
 import mask from "./files/mask.js";
+import Scrollable from "./libs/Scrollable.js";
 
 functions.isWebp();
 spoller();
@@ -20,3 +21,7 @@ tab();
 anchors();
 validate();
 mask();
+
+new Scrollable(".bot__tel-wrapper", {
+  wheelScrolling: true
+});
